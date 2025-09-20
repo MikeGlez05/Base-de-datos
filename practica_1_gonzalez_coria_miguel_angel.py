@@ -280,24 +280,3 @@ loudness_bajo[['c_loudness', 's_name', 's_artists']]
 mas_bajo = df.nsmallest(1, 'c_loudness')#Aqui ya podemos solo tomar el primero
 mas_bajo[['c_loudness', 's_name', 's_artists']]
 
-"""# Extras
-# Percentiles
-"""
-
-# Identificar variables continuas
-variables_c = [col for col in df.columns if col.startswith('c_')]
-
-# Calcular los 10 percentiles
-percentiles = np.linspace(0, 100, 11)
-
-# Percentiles para cada variable c
-resultado = df[variables_c].quantile(percentiles/100)
-
-percentiles
-
-"""HOROSCOPOS"""
-
-print('El prosesor es: Leo')
-print('El ayudante es: Piscis')
-
-"""#"""
